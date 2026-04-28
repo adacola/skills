@@ -4,12 +4,8 @@ description: |
   リモートリポジトリの不要なブランチをリストアップするスキル。
   デフォルトブランチにmerge済みで、merge後に新たなコミットがないブランチ（削除してよいブランチ）と、
   まだ作業中のブランチ（未mergeのもの）を分類してリストアップする。
-
-  以下のような場面で必ず使用する：
-  - 「不要なブランチをリストアップして」「ブランチを整理したい」「古いブランチを消したい」
-  - 「merge済みのブランチを調べて」「ブランチの棚卸しをしたい」
-  - 「リモートブランチをクリーンアップしたい」「どのブランチが消せるか調べて」
-  ユーザーがブランチの整理・削除・棚卸しに言及した場合は、明示的に依頼されていなくてもこのスキルを使うこと。
+allowed-tools: Bash(git branch *) Bash(git rev-list *) Bash(git fetch *) Bash(git log *) Bash(gh pr list *)
+disable-model-invocation: true
 ---
 
 # git-branch-cleanup
